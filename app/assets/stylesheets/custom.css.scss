@@ -1,0 +1,80 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+$pirate_black: #222831;
+
+body {
+    background-color:#393E46;
+    color: $pirate_black;
+}
+
+.jumbotron {
+    padding-top: 60px;
+}
+
+.hacked {
+    background-color:black;
+    color:#777;
+    
+    -webkit-box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.5);
+    -moz-box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.5);
+    box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.5);
+}
+
+.glitch{
+  color:white;
+  font-size:100px;
+  position:relative;
+  width:400px;
+  //margin:0 auto;
+  display:inline;
+  font-family: 'Varela';
+}
+@keyframes noise-anim{
+  $steps:20;
+  @for $i from 0 through $steps{
+    #{percentage($i*(1/$steps))}{
+      clip:rect(random(100)+px,9999px,random(100)+px,0);
+    }
+  }
+}
+.glitch:after{
+  content:attr(data-text);
+  position:absolute;
+  left:2px;
+  text-shadow:-1px 0 red;
+  top:0;
+  color:white;
+  background:black;
+  overflow:hidden;
+  clip:rect(0,900px,0,0); 
+  animation:noise-anim 5s infinite linear alternate-reverse;
+}
+
+@keyframes noise-anim-2{
+  $steps:20;
+  @for $i from 0 through $steps{
+    #{percentage($i*(1/$steps))}{
+      clip:rect(random(100)+px,9999px,random(100)+px,0);
+    }
+  }
+}
+.glitch:before{
+  content:attr(data-text);
+  position:absolute;
+  left:-2px;
+  text-shadow:1px 0 blue; 
+  top:0;
+  color:white;
+  background:black;
+  overflow:hidden;
+  clip:rect(0,900px,0,0); 
+  animation:noise-anim-2 6s infinite linear alternate-reverse;
+}
+
+.btn-jumbohack {
+    font-size: 120%;
+    margin: 5px 5px;
+    border-radius: 0;
+    color:#EEEEEE;
+}
