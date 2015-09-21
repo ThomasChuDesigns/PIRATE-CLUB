@@ -2,19 +2,21 @@
 <div class="jumbotron hacked text-center">
     
     <nav class="navbar navbar-inverse navbar-hacked">
-      <div class="row">
-        <div class="col-md-2 col-md-offset-3">
-          <div class="navbar-header">
-            <%= link_to 'The Pirate Club', root_path, class: 'navbar-brand' %>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3 col-md-offset-2">
+            <div class="navbar-header">
+              <%= link_to 'The Pirate Club', root_path, class: 'navbar-brand' %>
+            </div>
           </div>
-        </div>
-        <div class="col-md-4">
-          <ul class="nav navbar-nav navbar-right text-center">
-            <li><%= link_to "Events", "#" %></li>
-            <li><%= link_to "Members", "#" %></li>
-            <li><%= link_to "Contact", "#" %></li>
-          </ul> 
-        </div>
+          <div class="col-md-5">
+            <ul class="nav navbar-nav navbar-right text-center">
+              <li><%= link_to "Events", "#" %></li>
+              <li><%= link_to "Members", "#" %></li>
+              <li><%= link_to "Contact", "#" %></li>
+            </ul> 
+          </div>
+        </div>        
       </div>
     </nav>
     
@@ -48,7 +50,7 @@
       <div class="row">
         <div class="col-md-2 col-md-offset-1 text-center">
 
-          <img src="https://s3.amazonaws.com/uifaces/faces/twitter/csswizardry/128.jpg" class="img-circle img-objective"/>
+          <img src="https://s3.amazonaws.com/uifaces/faces/twitter/flamekaizar/128.jpg" class="img-circle img-objective"/>
         </div>
           <div class="col-md-8">
             <h2>Our Objectives <small></small></h2>
@@ -90,3 +92,32 @@
   <br/>
   <%= link_to "Sign up for Club Contents", "#", class:"btn btn-primary" %>
 </div>
+
+<div class="container footer-container">
+  <div class="row">
+    <div class="col-md-6 text-center">
+        <div class="welll objective-well footer-well">
+          <br>
+          <ul class="footer">
+            <li><i class="fa fa-envelope fa-3x"></i></li>
+            <li><i class="fa fa-phone fa-3x"></i></li>
+            <li><i class="fa fa-facebook fa-3x"></i></li>
+            <li><i class="fa fa-twitter fa-3x"></i></li>
+          </ul>
+          <br>
+        </div>
+    </div>
+    
+    <div class="col-md-6">
+      <div class="well objective-well footer-well">
+        <h4>Meeting Schedules <i class="fa fa-calendar-check-o"></i></h4>
+        <p>Room 1 Thursdays 24:00 - 24:00</p>        
+      </div>
+    </div>
+    
+  </div>
+</div>
+
+  <div class="well objective-well end-well text-center">
+      All Rights Reserved RSHS PIRATE CLUB
+  </div>

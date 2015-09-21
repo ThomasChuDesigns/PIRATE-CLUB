@@ -106,7 +106,7 @@ body {
   background-color:rgba(0,0,0,0.5);
   
   color: $terminal-green;
-  font-family: 'Montserrat';
+  font-family: 'Archivo Narrow';
   p {
     font-size: 14px;
     color: #2DEA8F;
@@ -120,9 +120,41 @@ body {
 .feature-well {
   border:none;
   border-top: 2px solid $terminal-green;
+  margin-bottom: 0;
   color:white;
+  
+  -webkit-box-shadow: 0px 10px 15px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 10px 15px 0px rgba(0,0,0,0.75);
+  box-shadow: 0px 10px 15px 0px rgba(0,0,0,0.75);
   
   p {
     color:white;
   }
+}
+
+//footer
+
+.footer-container {
+  color:#F7F4EA;
+  padding: 128px 0 ;
+}
+
+.footer {
+  padding-left: 0;
+  padding-top: 16px;
+  list-style: none;
+  
+  li {
+    display:inline;
+    margin: 0 30px;
+  }
+}
+
+.footer-well {
+  border-left: 2px solid $rose-red;
+}
+
+.end-well {
+  border: none;
+  margin-bottom: 0;
 }
