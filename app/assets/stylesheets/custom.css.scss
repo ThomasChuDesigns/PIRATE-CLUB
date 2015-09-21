@@ -102,9 +102,9 @@ ul.footer-list {
   padding-left: 0;
   list-style: none;
   
-  li {
-    display:inline;
-    margin: 0 30px;
+  li{
+    display: inline;
+    margin: 0 20px;
   }
 }
 
@@ -139,25 +139,25 @@ ul.footer-list {
 }
 
 .well.benefit-well {
-  border:0;
   border-radius:0;
-  border-left: 3px solid $rose-red;
-  
+  border: 0;
+  color: $terminal-green;
   padding-bottom: 40px;
   margin-bottom:0;
-  background-color: rgba(0,0,0,0.3);
-}
-
-.line-left {
-  border-left: 3px solid $rose-red;
+  background-color: rgba(0,0,0,0.8);
 }
 
 ul.benefit-members {
   list-style:none;
-  padding-left: 30px;
-  
-  li > a {
-    margin: 8px 0;
-    color: inherit;
+  -webkit-padding-start:0;
+  li{
+    margin: 8px;
   }
+}
+
+.jumbotron.img-coding {
+  margin-bottom: 0;
+  background-image: url("http://imagine.pics/images/890/89003.jpg");
+  
+  border-top: 2px solid $terminal-green;
 }
