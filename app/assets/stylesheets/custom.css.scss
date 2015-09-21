@@ -2,6 +2,8 @@
 @import "bootstrap";
 
 $pirate_black: #222831;
+$terminal-green: #24B273;
+$rose-red: #A51C2D;
 
 body {
     background-color:#393E46;
@@ -9,21 +11,32 @@ body {
 }
 
 .jumbotron {
-    padding-top: 60px;
+    padding-top: 120px;
 }
+
+.btn-hacked {
+  border-radius:0;
+}
+.btn-hacked.success {
+    border-bottom: 2px solid $terminal-green;
+  }
 
 .hacked {
     background-color:black;
     color:#777;
-    
-    -webkit-box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.5);
-    -moz-box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.5);
-    box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.5);
+    margin-bottom:0;
+}
+
+.navbar-hacked {
+  font-size: 14px;
+  background-color: rgba(0,0,0,0.5);
+  //height:60px;
+  border-bottom: 1px solid rgba(200,200,200,0.8);
 }
 
 .glitch{
   color:white;
-  font-size:100px;
+  font-size:72px;
   position:relative;
   width:400px;
   //margin:0 auto;
@@ -77,4 +90,33 @@ body {
     margin: 5px 5px;
     border-radius: 0;
     color:#EEEEEE;
+}
+
+
+// Jumbotron 2
+.hacked-2 {
+  background-image: url("http://i.imgur.com/t3lDqKd.jpg");
+  
+  -webkit-box-shadow: inset 0px 25px 20px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: inset 0px 25px 20px 0px rgba(0,0,0,0.75);
+  box-shadow: inset 0px 25px 20px 0px rgba(0,0,0,0.75);
+  
+}
+
+.objective-well {
+  border:none;
+  border-right: 2px solid $rose-red;
+  border-radius:0;
+  background-color:black;
+  
+  color: $terminal-green;
+  
+  p {
+    font-size: 14px;
+    color: #2DEA8F;
+  }
+}
+
+.img-objective {
+  margin-top:15px;
 }

@@ -1,22 +1,54 @@
 <link href='https://fonts.googleapis.com/css?family=Varela' rel='stylesheet' type='text/css'>
 <div class="jumbotron hacked text-center">
-    <nav class="navbar navbar-fixed-top navbar-inverse">
-      <div class="container">
-          <div class="navbar-header">
-              <%= link_to "The Pirate Club", "#", class: "navbar-brand" %>
-          </div>
-        <ul class="nav navbar-nav navbar-right">
-          <li><%= link_to "Home", "#" %></li>
-          <li><%= link_to "About", "#" %></li>
-          <li><%= link_to "Contact", "#" %></li>
-        </ul>
+    <nav class="navbar navbar-fixed-top navbar-inverse navbar-hacked">
+      <div class="row">
+        <div class="col-md-4 col-md-offset-4">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-nav-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <%= link_to 'The Pirate Club', root_path, class: 'navbar-brand' %>
+            </div>
+            <div class="collapse navbar-collapse" id="main-nav-collapse">
+              <ul class="nav navbar-nav navbar-right">
+                <li><%= link_to "Home", "#" %></li>
+                <li><%= link_to "About", "#" %></li>
+                <li><%= link_to "Contact", "#" %></li>
+              </ul>  
+            </div>
+        </div>
       </div>
     </nav>
     
     <div class="glitch" data-text="THE&nbsp;PIRATE&nbsp;CLUB">THE PIRATE CLUB</div>
-    <h3>// Welcome to the official site for the RSHS Pirate Club.</h3>
+    <h3>//Welcome to the official site for the RSHS Pirate Club.</h3>
     <p>Club Meetings: Thursday @ Room 135</p>
     
     <%= link_to "Club Executives", "#", class: "btn btn-danger btn-jumbohack" %>
-    <%= link_to "Club Events", "#", class: "btn btn-danger btn-jumbohack" %>
+    <%= link_to "Upcoming Events", "#", class: "btn btn-danger btn-jumbohack" %>
+    <br/>
+</div>
+
+<div class="jumbotron hacked-2">
+  <div class="container">
+    
+    <div class="well objective-well">
+      <div class="row">
+        <div class="col-md-2 col-md-offset-1 text-center">
+
+          <img src="https://s3.amazonaws.com/uifaces/faces/twitter/csswizardry/128.jpg" class="img-circle img-objective"/>
+        </div>
+          <div class="col-md-8">
+            <h2>Our Objectives <small>Arun Wosaree</small></h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis, sit, repellendus unde alias hic pariatur fugit ab perspiciatis. Commodi, nulla, vero ipsum suscipit eligendi omnis atque beatae magnam vel deserunt!</p>
+            <%= link_to "Sign up for news and upcoming events!", "#", class:"btn btn-success btn-hacked success" %>
+          </div>
+      </div>
+    </div>
+    
+    
+  </div>
 </div>
