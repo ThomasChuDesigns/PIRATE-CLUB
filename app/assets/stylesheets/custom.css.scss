@@ -13,20 +13,24 @@ body {
 .btn-hacked {
   border-radius:0;
 }
-.btn-hacked.success {
-    border-bottom: 2px solid $terminal-green;
-  }
 
 .hacked {
-    padding: 30px 0 256px 0;
+    padding: 128px 0 256px 0;
     background-color:black;
     color:#777;
-    margin-bottom:0;
+    margin:0;
 }
 
 .navbar-hacked {
-  padding-bottom: 128px;
-  background-color: rgba(0,0,0,0.5);
+  margin-bottom:0;
+  padding-top:32px;
+  
+  border:none;
+  background-color: rgba(0,0,0,1);
+}
+
+.navbar-fixed-top {
+  padding-top:0;
 }
 
 .glitch{
@@ -151,6 +155,7 @@ body {
 }
 
 .footer-well {
+  border-bottom: 3px solid $pirate-black;
   border-left: 2px solid $rose-red;
 }
 
