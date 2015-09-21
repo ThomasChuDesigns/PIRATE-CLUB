@@ -18,17 +18,15 @@ body {
   }
 
 .hacked {
-    padding: 256px 0;
+    padding: 30px 0 256px 0;
     background-color:black;
     color:#777;
     margin-bottom:0;
 }
 
 .navbar-hacked {
-  font-size: 14px;
+  padding-bottom: 128px;
   background-color: rgba(0,0,0,0.5);
-  //height:60px;
-  border-bottom: 1px solid rgba(200,200,200,0.8);
 }
 
 .glitch{
