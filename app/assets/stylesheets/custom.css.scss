@@ -12,11 +12,13 @@ body.pirate {
 }
 
 .navbar.navbar-hacked {
+  border-radius:0;
+  
   margin-bottom:0;
-  padding-top:32px;
+  padding-top:16px;
   
   border:none;
-  background-color: rgba(0,0,0,1);
+  background-color: rgba(0,0,0,0.8);
   
   -webkit-box-shadow: 0px 10px 15px 0px rgba(0,0,0,0.75);
   -moz-box-shadow: 0px 10px 15px 0px rgba(0,0,0,0.75);
