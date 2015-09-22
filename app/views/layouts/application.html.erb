@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>SimpleApp</title>
+  <title>RSHS Pirate Club</title>
   <link href='https://fonts.googleapis.com/css?family=Varela' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Archivo+Narrow' rel='stylesheet' type='text/css'>
   <%= stylesheet_link_tag    'application', media: 'all' %>
@@ -33,6 +33,7 @@
                   <li><%= link_to "Events", "#" %></li>
                   <li><%= link_to "Members", "#" %></li>
                     <% if current_user %>
+                      <li><%= link_to "Edit Profile", edit_user_profile_path(current_user), method: :get %></li>
                       <li><%= link_to "Sign Out", destroy_user_session_path, method: :delete %></li>
                     <% else %>
                       <li><%= link_to "Log In", new_user_session_path, method: :get %></li>
