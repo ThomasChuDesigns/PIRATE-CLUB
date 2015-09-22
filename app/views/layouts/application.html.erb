@@ -28,7 +28,12 @@
                 <ul class="nav navbar-nav navbar-right text-center">
                   <li><%= link_to "Events", "#" %></li>
                   <li><%= link_to "Members", "#" %></li>
-                  <li><%= link_to "Contact", "#" %></li>
+                    <% if current_user %>
+                      <li><%= button_to "Sign Out", destroy_user_session_path, method: :delete %></li>
+                    <% else %>
+                      <li><%= link_to "Log In", new_user_session_path, method: :get %></li>
+                      <li><%= link_to "Sign Up", new_user_registration_path, method: :get %></li>
+                    <% end %>                  
                 </ul>               
             </div>
           </div>
@@ -36,15 +41,6 @@
       </div>
     </nav>  
   <%= yield %>  
-
-    <div class="well objective-well end-well text-center">
-          <ul class="footer-list">
-            <li><a href=""><i class="fa fa-envelope"></i></a></li>
-            <li><a href=""><i class="fa fa-phone"></i></a></li>
-            <li><a href=""><i class="fa fa-facebook"></i></a></li>
-            <li><a href=""><i class="fa fa-twitter"></i></a></li>
-          </ul>
-  </div>
 
 </body>
 </html>
