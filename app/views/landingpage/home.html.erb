@@ -36,7 +36,9 @@
           <div class="col-md-8">
             <h2>Goals for this Year</h2> <small></small></h2>
             <p>We plan to lease a server for one... And we're always listening for new ideas! (Related to tech)</p>
-            <%= link_to "Sign up to view more", "#", class:"btn btn-primary btn-hacked" %>
+            <% if !current_user %>
+            <%= link_to "Sign up to view more", new_user_registration_path, class:"btn btn-primary btn-hacked" %>
+            <% end %>
           </div>
       </div>
     </div>
