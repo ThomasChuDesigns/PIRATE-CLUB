@@ -4,7 +4,7 @@
     <h3>//Welcome to the official site for the RSHS Pirate Club.</h3>
     <p>Club Meetings: Thursday @ Room 135</p>
     
-    <%= link_to "Club Executives", "#", class: "btn btn-danger btn-jumbohack" %>
+    <%= link_to "Club Executives", users_path, class: "btn btn-danger btn-jumbohack" %>
     <%= link_to "Create your profile!", new_user_profile_path(current_user), class: "btn btn-primary btn-jumbohack" if current_user %>
     <br/>
     <br>

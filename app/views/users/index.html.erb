@@ -1,0 +1,89 @@
+  <div class="jumbotron hacked text-center">
+    <h1>Our Members</h1>
+    <p>The Pirate Club offers a wide variety of diverse and vibrant members that participates in events</p>
+  </div>
+<div class="container-fluid text-center">
+  
+        <br>
+        <h2>All Members</h2>
+            <div class="row">
+              <% @user.each do |user| %>
+                <% if user.profile && !user.username.include?("test") %>
+                              
+                  <div class="col-sm-3">
+                    <div class="well objective-well">
+                        <% if user.profile.avatar %>
+                                        
+                          <%= link_to user do %>
+                            <%= image_tag user.profile.avatar.url(:thumb), class: 'img img-circle img-avatar' %>
+                          <% end %>
+                                          
+                        <% end %>
+                                        
+                        <h3><%= user.username %></h3>
+                    </div>
+                  </div>
+                <% end %>
+              <% end %>
+            </div> 
+            
+        <h2><span class="label label-danger">Captains</span></h2>
+        <br>
+        
+            <div class="row">
+              <% @user.each do |user| %>
+                <% if user.rank_id == 1 || user.rank_id == 2 %>
+                              
+                  <div class="col-sm-3">
+                    <div class="well objective-well">
+                        <% if user.profile.avatar %>
+                                        
+                          <%= link_to user do %>
+                            <%= image_tag user.profile.avatar.url(:thumb), class: 'img img-circle img-avatar' %>
+                          <% end %>
+                                          
+                        <% end %>
+                                        
+                        <h4><%= user.username %></h4>
+                    </div>
+                  </div>
+                <% end %>
+              <% end %>
+            </div>
+            
+        <h2><span class="label label-primary">Crew Members</span></h2>
+        <br>
+        
+            <div class="row">
+              <% @user.each do |user| %>
+                <% if user.rank_id == 3 && user.profile %>
+                              
+                  <div class="col-sm-3">
+                    <div class="well objective-well">
+                        <% if user.profile.avatar %>
+                                        
+                          <%= link_to user do %>
+                            <%= image_tag user.profile.avatar.url(:thumb), class: 'img img-circle img-avatar' %>
+                          <% end %>
+                                          
+                        <% end %>
+                                        
+                        <h4><%= user.username %></h4>
+                    </div>
+                  </div>
+                <% end %>
+              <% end %>
+            </div>
+            
+</div>
+
+  <br>
+  <br>
+    <div class="well objective-well end-well text-center">
+          <ul class="footer-list">
+            <li><a href=""><i class="fa fa-envelope fa-2x"></i></a></li>
+            <li><a href=""><i class="fa fa-phone fa-2x"></i></a></li>
+            <li><a href=""><i class="fa fa-facebook fa-2x"></i></a></li>
+            <li><a href=""><i class="fa fa-twitter fa-2x"></i></a></li>
+          </ul>
+  </div>
