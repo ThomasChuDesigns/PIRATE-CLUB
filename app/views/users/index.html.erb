@@ -5,27 +5,6 @@
 <div class="container-fluid text-center">
   
         <br>
-        <h2>All Members</h2>
-            <div class="row">
-              <% @user.each do |user| %>
-                <% if user.profile && !user.username.include?("test") %>
-                              
-                  <div class="col-sm-3">
-                    <div class="well objective-well">
-                        <% if user.profile.avatar %>
-                                        
-                          <%= link_to user do %>
-                            <%= image_tag user.profile.avatar.url(:thumb), class: 'img img-circle img-avatar' %>
-                          <% end %>
-                                          
-                        <% end %>
-                                        
-                        <h3><%= user.username %></h3>
-                    </div>
-                  </div>
-                <% end %>
-              <% end %>
-            </div> 
             
         <h2><span class="label label-danger">Captains</span></h2>
         <br>
