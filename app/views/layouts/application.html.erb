@@ -33,7 +33,9 @@
                   <li><%= link_to "Events", "#" %></li>
                   <li><%= link_to "Members", "#" %></li>
                     <% if current_user %>
-                      <li><%= link_to "Edit Profile", edit_user_profile_path(current_user), method: :get %></li>
+                      <% if current_user.profile %>
+                        <li><%= link_to "Edit Profile", edit_user_profile_path(current_user), method: :get %></li>                    
+                      <% end %>
                       <li><%= link_to "Sign Out", destroy_user_session_path, method: :delete %></li>
                     <% else %>
                       <li><%= link_to "Log In", new_user_session_path, method: :get %></li>

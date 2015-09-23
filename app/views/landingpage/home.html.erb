@@ -5,10 +5,9 @@
     <p>Club Meetings: Thursday @ Room 135</p>
     
     <%= link_to "Club Executives", "#", class: "btn btn-danger btn-jumbohack" %>
-    <%= link_to "Upcoming Events", "#", class: "btn btn-danger btn-jumbohack" %>
+    <%= link_to "Create your profile!", new_user_profile_path(current_user), class: "btn btn-primary btn-jumbohack" if current_user %>
     <br/>
     <br>
-    <%= link_to "Create your profile!", new_user_profile_path(current_user), class: "btn btn-primary btn-hacked" if current_user %>
 </div>
 
 <div class="jumbotron hacked-2">
@@ -37,7 +36,7 @@
           <div class="col-md-8">
             <h2>Goals for this Year</h2> <small></small></h2>
             <p>We plan to lease a server for one... And we're always listening for new ideas! (Related to tech)</p>
-            <%= link_to "View More >", "#", class:"btn btn-primary btn-hacked" %>
+            <%= link_to "Sign up to view more", "#", class:"btn btn-primary btn-hacked" %>
           </div>
       </div>
     </div>
@@ -92,9 +91,9 @@
 
     <div class="well objective-well end-well text-center">
           <ul class="footer-list">
-            <li><a href=""><i class="fa fa-envelope"></i></a></li>
-            <li><a href=""><i class="fa fa-phone"></i></a></li>
-            <li><a href=""><i class="fa fa-facebook"></i></a></li>
-            <li><a href=""><i class="fa fa-twitter"></i></a></li>
+            <li><a href=""><i class="fa fa-envelope fa-2x"></i></a></li>
+            <li><a href=""><i class="fa fa-phone fa-2x"></i></a></li>
+            <li><a href=""><i class="fa fa-facebook fa-2x"></i></a></li>
+            <li><a href=""><i class="fa fa-twitter fa-2x"></i></a></li>
           </ul>
   </div>
