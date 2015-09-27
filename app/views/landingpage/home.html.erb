@@ -5,7 +5,14 @@
     <p>Club Meetings: Thursday @ Room 135</p>
     
     <%= link_to "Club Executives", users_path, class: "btn btn-danger btn-jumbohack" %>
-    <%= link_to "Create your profile!", new_user_profile_path(current_user), class: "btn btn-primary btn-jumbohack" if current_user %>
+    <% if current_user %>
+      <% if current_user.profile %>
+        <%= link_to "Edit your profile!", edit_user_profile_path(current_user), class: "btn btn-primary btn-jumbohack" %>
+        <% else %>
+        <%= link_to "Create your profile!", new_user_profile_path(current_user), class: "btn btn-primary btn-jumbohack" %>   
+      <% end %>
+    <% end %>
+    
     <br/>
     <br>
 </div>

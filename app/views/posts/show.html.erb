@@ -1,0 +1,17 @@
+<div class="container-fluid">
+    <div class="well objective-well footer-well">
+        <div class="row text-center">
+            <div class="col-md-8 col-md-offset-2">
+                <h2>
+                    <%= @post.title %>
+                </h2>
+                <h4><span class="label label-primary"><%= @post.topic %></span></h4>
+                <p>Created: <%= time_ago_in_words(@post.created_at) %> ago</p>
+                
+                <div class="well objective-well">
+                    <p><%= @post.body %></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

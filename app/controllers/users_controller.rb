@@ -7,4 +7,5 @@ class UsersController < ApplicationController
     def index
         @user = User.includes(:profile)
     end
+    
 end
