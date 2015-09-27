@@ -2,12 +2,12 @@
 <div class="jumbotron hacked text-center" id="navtron">
     <div class="glitch" data-text="THE&nbsp;PIRATE&nbsp;CLUB">THE PIRATE CLUB</div>
     <h3>//Welcome to the official site for the RSHS Pirate Club.</h3>
-    <p>Club Meetings: Thursday @ Room 135</p>
+    <p>Club Meetings: LUNCH Tuesday @ Room 204</p>
     
     <%= link_to "Club Executives", users_path, class: "btn btn-danger btn-jumbohack" %>
     <% if current_user %>
       <% if current_user.profile %>
-        <%= link_to "Edit your profile!", edit_user_profile_path(current_user), class: "btn btn-primary btn-jumbohack" %>
+        <%= link_to "Join The Discussion!", posts_path, class: "btn btn-primary btn-jumbohack" %>
         <% else %>
         <%= link_to "Create your profile!", new_user_profile_path(current_user), class: "btn btn-primary btn-jumbohack" %>   
       <% end %>
@@ -89,7 +89,7 @@
     <div class="col-md-6 col-md-offset-3">
       <div class="well objective-well footer-well">
         <h4>Meeting Schedules <i class="fa fa-calendar-check-o"></i></h4>
-        <p>Room 1 Thursdays 24:00 - 24:00</p>    
+        <p>Room 204 | Tuesday @ Lunch</p>    
         <br>
         <br>
       </div>
