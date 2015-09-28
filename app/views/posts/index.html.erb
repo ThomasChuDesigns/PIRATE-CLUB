@@ -18,9 +18,11 @@
                                 <%= link_to post.title, post, :target => "_blank" %>
                             </h2>
                             <p><%= post.created_at.strftime("%B, %d, %Y") %></p>
-                            <% if current_user.rank_id == 1 || current_user.rank_id == 2 %>
-                                <%= link_to "Edit Post", edit_post_path(post), class:'btn btn-warning btn-hacked' %>
-                                <%= link_to "Delete Post", post_path(post), method: :delete, class:'btn btn-danger btn-hacked' %>
+                            <% if user_signed_in? %>
+                                <% if current_user.rank_id == 1 || current_user.rank_id == 2 %>
+                                    <%= link_to "Edit Post", edit_post_path(post), class:'btn btn-warning btn-hacked' %>
+                                    <%= link_to "Delete Post", post_path(post), method: :delete, class:'btn btn-danger btn-hacked' %>
+                                <% end %>                            
                             <% end %>
                     </div>
                 </div>              
@@ -39,9 +41,11 @@
                                 <%= link_to post.title, post, :target => "_blank" %>
                             </h2>
                             <p><%= post.created_at.strftime("%B, %d, %Y") %></p>
-                            <% if current_user.rank_id == 1 || current_user.rank_id == 2 %>
-                                <%= link_to "Edit Post", edit_post_path(post), class:'btn btn-warning btn-hacked' %>
-                                <%= link_to "Delete Post", post_path(post), method: :delete, class:'btn btn-danger btn-hacked' %>
+                            <% if user_signed_in? %>
+                                <% if current_user.rank_id == 1 || current_user.rank_id == 2 %>
+                                    <%= link_to "Edit Post", edit_post_path(post), class:'btn btn-warning btn-hacked' %>
+                                    <%= link_to "Delete Post", post_path(post), method: :delete, class:'btn btn-danger btn-hacked' %>
+                                <% end %>                            
                             <% end %>
                     </div>
                 </div>              
@@ -60,11 +64,12 @@
                                 <%= link_to post.title, post, :target => "_blank" %>
                             </h2>
                             <p><%= post.created_at.strftime("%B, %d, %Y") %></p>
-                            <% if current_user.rank_id == 1 || current_user.rank_id == 2 %>
-                                <%= link_to "Edit Post", edit_post_path(post), class:'btn btn-warning btn-hacked' %>
-                                <%= link_to "Delete Post", post_path(post), method: :delete, class:'btn btn-danger btn-hacked' %>
+                            <% if user_signed_in? %>
+                                <% if current_user.rank_id == 1 || current_user.rank_id == 2 %>
+                                    <%= link_to "Edit Post", edit_post_path(post), class:'btn btn-warning btn-hacked' %>
+                                    <%= link_to "Delete Post", post_path(post), method: :delete, class:'btn btn-danger btn-hacked' %>
+                                <% end %>                            
                             <% end %>
-                    </div>
                 </div>              
             <% end %>        
         <% end %>        
